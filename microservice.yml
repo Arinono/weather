@@ -1,0 +1,46 @@
+omg: 1
+lifecycle:
+  startup:
+    command: ["node", "app.js"]
+info:
+  version: 1.0.0
+  title: weather
+  description: MetaWeather as a microservice
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  contact:
+    name: Asyncy
+    url: https://asyncy.com
+    email: hello@asyncy.com
+actions:
+  city:
+    help: Gets city weather
+    arguments:
+      q:
+        type: string
+        in: query
+        help: The city you want
+    http:
+      port: 5000
+      method: get
+      path: /city
+    output:
+      type: string
+  coords:
+    help: Gets city weather
+    arguments:
+      lat:
+        type: string
+        in: query
+        help: The lattitude you want
+      long:
+        type: string
+        in: query
+        help: The longitude you want
+    http:
+      port: 5000
+      method: get
+      path: /coords
+    output:
+      type: string

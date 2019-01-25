@@ -1,0 +1,7 @@
+node_modules/
+.idea/
+.gitignore
+yarn.lock
+package-json.lock
+yarn-error.log
+README.md
